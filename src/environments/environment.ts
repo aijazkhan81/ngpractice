@@ -1,9 +1,15 @@
+import { AppComponent } from './../app/app.component';
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build ---prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  routes: [
+    { path: '', component: AppComponent, pathMatch: 'full' },
+    { path: 'monitoring', loadChildren: '../app/featuremodules/monitoring/monitoring.module#MonitoringModule' }
+  ],
+  modules: ''
 };
 
 /*
